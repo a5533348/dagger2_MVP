@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import cn.xdeveloper.dagger2.base.mvp.BasePresenter;
 import cn.xdeveloper.dagger2.base.scope.ActivityScope;
+import dagger.Provides;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -12,19 +13,16 @@ import rx.schedulers.Schedulers;
  * Created by Administrator on 2017/1/3.
  */
 @ActivityScope
-public class LoginPresenter extends BasePresenter<LoginContract.Model, LoginContract.View> {
+public class LoginPresenter extends BasePresenter<LoginContract.Model, LoginContract.View> implements LoginContract.Presenter {
 
     @Inject
-    public LoginPresenter() {
-
+    LoginPresenter() {
     }
 
     /**
      * 登录
-     *
-     * @param mobile
-     * @param password
      */
+    @Override
     public void login(final String mobile, final String password) {
         mModel.login(mobile, password)
                 .subscribeOn(Schedulers.io())
@@ -47,4 +45,11 @@ public class LoginPresenter extends BasePresenter<LoginContract.Model, LoginCont
                 });
 
     }
+
+    @Override
+    public void onDestroy() {
+
+    }
+
+
 }

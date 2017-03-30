@@ -6,7 +6,7 @@ import com.google.gson.Gson;
 
 import javax.inject.Singleton;
 
-import cn.xdeveloper.dagger2.HuiApplication;
+import cn.xdeveloper.dagger2.App;
 import dagger.Module;
 import dagger.Provides;
 
@@ -17,7 +17,7 @@ import dagger.Provides;
 public class AppModule {
 
 
-    public AppModule(HuiApplication application) {
+    public AppModule(App application) {
         this.mApplication = application;
     }
 

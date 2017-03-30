@@ -9,12 +9,12 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.xdeveloper.dagger2.HuiApplication;
+import cn.xdeveloper.dagger2.App;
 import cn.xdeveloper.dagger2.base.AppComponent;
 
-public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
+public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivity {
     protected final String TAG = this.getClass().getSimpleName();
-    protected HuiApplication mApplication;
+    protected App mApplication;
     private Unbinder mUnbinder;
     @Inject
     protected P mPresenter;
@@ -24,7 +24,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mApplication = (HuiApplication) getApplication();
+        mApplication = (App) getApplication();
         mContext = this;
 
         setContentView(initView());

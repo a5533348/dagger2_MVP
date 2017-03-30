@@ -1,14 +1,8 @@
-package cn.xdeveloper.dagger2.di.component;
-
-import android.app.Application;
+package cn.xdeveloper.dagger2.ui.login.inject;
 
 import cn.xdeveloper.dagger2.base.AppComponent;
 import cn.xdeveloper.dagger2.base.scope.ActivityScope;
-import cn.xdeveloper.dagger2.di.module.LoginModule;
-import cn.xdeveloper.dagger2.entity.Student;
 import cn.xdeveloper.dagger2.ui.login.LoginActivity;
-
-import cn.xdeveloper.dagger2.ui.login.LoginContract;
 import dagger.Component;
 
 @ActivityScope

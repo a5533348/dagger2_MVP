@@ -6,5 +6,4 @@ package cn.xdeveloper.dagger2.base.mvp;
  */
 
 public interface IModel {
-    void onDestory();
 }

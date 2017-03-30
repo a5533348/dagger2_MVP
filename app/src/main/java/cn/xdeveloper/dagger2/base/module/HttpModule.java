@@ -13,7 +13,7 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by jessyan on 2016/3/14.
+ * Created by Laiyimin on 2016/3/14.
  */
 @Module
 public class HttpModule {
@@ -24,7 +24,7 @@ public class HttpModule {
     /**
      * 读超时时间，单位s
      */
-    private static final int DEFAULT_READ_TIMEOUT = 10 * 60;
+    private static final int DEFAULT_READ_TIMEOUT = 10;
     /**
      * 写超时时间，单位s
      */

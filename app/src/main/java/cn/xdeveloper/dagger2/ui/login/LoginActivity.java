@@ -9,15 +9,15 @@ import butterknife.BindView;
 import cn.xdeveloper.dagger2.R;
 import cn.xdeveloper.dagger2.base.AppComponent;
 import cn.xdeveloper.dagger2.base.mvp.BaseActivity;
-import cn.xdeveloper.dagger2.di.component.DaggerLoginComponent;
-import cn.xdeveloper.dagger2.di.module.LoginModule;
+import cn.xdeveloper.dagger2.ui.login.inject.DaggerLoginComponent;
+import cn.xdeveloper.dagger2.ui.login.inject.LoginModule;
 
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/3.
  */
-public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginContract.View {
+public class LoginActivity extends BaseActivity<LoginContract.Presenter> implements LoginContract.View {
 
     @BindView(R.id.et_username)
     EditText et_username;
@@ -52,6 +52,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
         mPresenter.login(username,password);
     }
+
 
 
     @Override

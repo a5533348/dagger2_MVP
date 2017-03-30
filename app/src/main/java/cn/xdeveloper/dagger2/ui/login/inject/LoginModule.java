@@ -1,9 +1,10 @@
-package cn.xdeveloper.dagger2.di.module;
+package cn.xdeveloper.dagger2.ui.login.inject;
 
 import cn.xdeveloper.dagger2.base.scope.ActivityScope;
 import cn.xdeveloper.dagger2.ui.login.LoginContract;
 import cn.xdeveloper.dagger2.ui.login.LoginModel;
 
+import cn.xdeveloper.dagger2.ui.login.LoginPresenter;
 import dagger.Module;
 import dagger.Provides;
 
@@ -17,14 +18,20 @@ public class LoginModule {
 
     @ActivityScope
     @Provides
-    LoginContract.View provideLoginView() {
-        return this.view;
+    LoginContract.Model provideModel(LoginModel model) {
+        return model;
     }
 
     @ActivityScope
     @Provides
-    LoginContract.Model provideLoginModel(LoginModel model) {
-        return model;
+    LoginContract.View provideView() {
+        return this.view;
     }
 
+
+    @ActivityScope
+    @Provides
+    LoginContract.Presenter providePresenter(LoginPresenter presenter) {
+        return presenter;
+    }
 }

@@ -8,15 +8,10 @@ import javax.inject.Singleton;
 @Singleton
 public class ServiceManager {
 
-    private UserService mUserService;
+    @Inject
+    public UserService mUserService;
 
     @Inject
-    public ServiceManager(UserService userService) {
-        this.mUserService = userService;
-    }
-
-    public UserService getUserService() {
-        return mUserService;
-    }
+    public ServiceManager(){}
 
 }
