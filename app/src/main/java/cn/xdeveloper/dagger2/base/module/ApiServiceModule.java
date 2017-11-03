@@ -1,9 +1,8 @@
 package cn.xdeveloper.dagger2.base.module;
 
-import cn.xdeveloper.dagger2.network.retrofit.UserService;
-
 import javax.inject.Singleton;
 
+import cn.xdeveloper.dagger2.network.retrofit.UserService;
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.HttpUrl;

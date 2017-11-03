@@ -4,7 +4,6 @@ import javax.inject.Inject;
 
 import cn.xdeveloper.dagger2.base.mvp.BasePresenter;
 import cn.xdeveloper.dagger2.base.scope.ActivityScope;
-import dagger.Provides;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -18,6 +17,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.Model, LoginCont
     @Inject
     LoginPresenter() {
     }
+
 
     /**
      * 登录
